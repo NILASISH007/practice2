@@ -1,0 +1,16 @@
+<form>
+  <div class="row">
+    <div class="col">
+<label>Show new fields</label>
+  <select [(ngModel)]="options" [ngModelOptions]="{standalone: true}">
+    <option value="1">Yes</option>
+    <option value="2">No</option>
+  </select>
+    </div>
+    <div class="col">
+<!-- <label>Show new fields</label> -->
+<input type="text" placeholder="" *ngIf="options==1">
+    </div>
+  </div>
+
+</form>
