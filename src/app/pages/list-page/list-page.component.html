@@ -1,0 +1,14 @@
+<table border="2">
+  <tr >
+    <th>Sl No</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+  </tr>
+  <tr *ngFor="let listObj of tableList; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{listObj.name}}</td>
+    <td>{{listObj.Age}}</td>
+    <td>{{listObj.Gender}}</td>
+  </tr>
+</table>

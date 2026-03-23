@@ -1,0 +1,32 @@
+<div class="container center" style="border:2px solid black;height: 300px;width:80%; background-color: rgb(199, 237, 237);left:10% ;position: absolute;">
+<h1 style="text-align: center;">Login Page</h1>
+ <hr>
+ <form [formGroup]="loginForm">
+<div class="row" style="text-align: center;">
+ <div class="col">
+<Label>Username:</Label>
+<input type="text" placeholder="enter your username" formControlName="userName">
+<div *ngIf="loginForm.get('userName')?.touched && loginForm.get('userName')?.invalid ">
+  <small *ngIf="loginForm.get('userName')?.errors?.['required']" style="color: red;">
+    Please Fill the User Name
+  </small>
+</div>
+ </div>
+<div class="col">
+  <Label>Password:</Label>
+  <input type="password" placeholder="enter your Password" formControlName="password">
+  <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid ">
+  <small *ngIf="loginForm.get('password')?.errors?.['required']" style="color: red;">
+    Please Fill the Password
+  </small>
+</div>
+</div>
+
+</div>
+<div class="row"  style="text-align: center;">
+  <div class="col">
+    <button   (click)="submit()">Submit</button>
+  </div>
+</div>
+</form>
+</div>
